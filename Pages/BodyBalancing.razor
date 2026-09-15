@@ -1,0 +1,126 @@
+@page "/body-balancing"
+@page "/body-balancing/{*Path}"
+@using BodyBalancingApp.Models
+@using BodyBalancingApp.Services
+@inject BodyBalancingDataService DataService
+@inject NavigationManager Nav
+
+<PageTitle>Body Balancing</PageTitle>
+
+<h1>Body Balancing</h1>
+<p class="page-intro">Follow the flow chart, one step at a time, to narrow down the imbalance.</p>
+
+<FlowTrail Trail="_trail" RootLabel="Body Balancing" OnJump="JumpTo" />
+
+@if (_loading)
+{
+    <p>Loading…</p>
+}
+else if (_notFound)
+{
+    <div class="empty-state">
+        <p>That path couldn't be found.</p>
+        <button type="button" class="btn-secondary" @onclick="() => JumpTo(-1)">Back to Body Balancing</button>
+    </div>
+}
+else if (CurrentNode is not null && _choices.Count == 0)
+{
+    <div class="leaf-panel">
+        <div class="leaf-image">
+            <PlaceholderImage Title="@CurrentNode.Title" Seed="@CurrentNode.Id" ImageUrl="@CurrentNode.Image" />
+        </div>
+        <div class="leaf-body">
+            <h2>@CurrentNode.Title</h2>
+            @if (!string.IsNullOrWhiteSpace(CurrentNode.Description))
+            {
+                <p>@CurrentNode.Description</p>
+            }
+            else
+            {
+                <p class="muted">You've reached the end of this branch of the flow chart.</p>
+            }
+            <div class="leaf-actions">
+                <button type="button" class="btn-secondary" @onclick="() => JumpTo(_trail.Count - 2)">Back</button>
+                <button type="button" class="btn-secondary" @onclick="() => JumpTo(-1)">Start Over</button>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <h2 class="level-heading">@LevelHeading</h2>
+    @if (!string.IsNullOrWhiteSpace(CurrentNode?.Description))
+    {
+        <p class="muted">@CurrentNode!.Description</p>
+    }
+
+    <div class="node-grid">
+        @foreach (var node in _choices)
+        {
+            <NodeCard Node="node" OnSelect="SelectNode" />
+        }
+    </div>
+}
+
+@code {
+    [Parameter] public string? Path { get; set; }
+
+    private List<TreeNode> _trail = new();
+    private List<TreeNode> _choices = new();
+    private bool _notFound;
+    private bool _loading = true;
+
+    private TreeNode? CurrentNode => _trail.Count > 0 ? _trail[^1] : null;
+
+    private string LevelHeading => CurrentNode is null
+        ? "Choose a category"
+        : $"{CurrentNode.Title} — choose an option";
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _loading = true;
+        _notFound = false;
+
+        var segments = string.IsNullOrWhiteSpace(Path)
+            ? Array.Empty<string>()
+            : Path.Split('/', StringSplitOptions.RemoveEmptyEntries);
+
+        var result = await DataService.ResolvePathAsync(segments);
+        if (result is null)
+        {
+            _notFound = true;
+            _trail = new();
+            _choices = new();
+        }
+        else
+        {
+            _trail = result.Value.Trail;
+            _choices = result.Value.Choices;
+        }
+
+        _loading = false;
+    }
+
+    private void JumpTo(int index)
+    {
+        if (index < 0)
+        {
+            Nav.NavigateTo("/body-balancing");
+            return;
+        }
+
+        var slugPath = string.Join('/', _trail.Take(index + 1).Select(n => n.Id));
+        Nav.NavigateTo($"/body-balancing/{slugPath}");
+    }
+
+    private void SelectNode(TreeNode node)
+    {
+        if (node.ComingSoon)
+        {
+            return;
+        }
+
+        var prefix = _trail.Count == 0 ? "" : string.Join('/', _trail.Select(n => n.Id)) + "/";
+        Nav.NavigateTo($"/body-balancing/{prefix}{node.Id}");
+    }
+}

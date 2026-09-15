@@ -1,0 +1,43 @@
+.flow-trail {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 1.5rem;
+}
+
+.flow-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flow-step:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.flow-step-current {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    cursor: default;
+}
+
+.flow-step-current:hover {
+    color: white;
+}
+
+.flow-arrow {
+    color: var(--muted);
+    font-size: 1rem;
+}

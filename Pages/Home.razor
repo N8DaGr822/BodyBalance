@@ -1,0 +1,23 @@
+@page "/"
+@inject NavigationManager Nav
+
+<PageTitle>Wellness Navigator</PageTitle>
+
+<div class="home-hero">
+    <h1>What would you like to work on?</h1>
+    <p class="muted">Choose a path to begin the flow chart.</p>
+
+    <div class="option-grid">
+        <button type="button" class="option-card option-card-1" @onclick='() => Nav.NavigateTo("/body-balancing")'>
+            <span class="option-icon" aria-hidden="true">⚖️</span>
+            <span class="option-title">Body Balancing</span>
+            <span class="option-desc">Explore physical, energetic, and mental imbalances.</span>
+        </button>
+
+        <button type="button" class="option-card option-card-2" @onclick='() => Nav.NavigateTo("/emotion-stability")'>
+            <span class="option-icon" aria-hidden="true">💗</span>
+            <span class="option-title">Emotion Stability</span>
+            <span class="option-desc">Explore emotional balance and regulation.</span>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+@using BodyBalancingApp.Models
+
+<button type="button" class="node-card @(Node.ComingSoon ? "node-card-disabled" : "")"
+        disabled="@Node.ComingSoon"
+        @onclick="() => OnSelect.InvokeAsync(Node)">
+    <PlaceholderImage Title="@Node.Title" Seed="@Node.Id" ImageUrl="@Node.Image" />
+    <div class="node-card-body">
+        <span class="node-card-title">@Node.Title</span>
+        @if (Node.ComingSoon)
+        {
+            <span class="node-card-meta node-card-badge">Coming soon</span>
+        }
+        else if (!Node.IsLeaf)
+        {
+            <span class="node-card-meta">@Node.Children.Count option@(Node.Children.Count == 1 ? "" : "s")</span>
+        }
+        else
+        {
+            <span class="node-card-meta">Select</span>
+        }
+    </div>
+</button>
+
+@code {
+    [Parameter, EditorRequired] public TreeNode Node { get; set; } = null!;
+    [Parameter] public EventCallback<TreeNode> OnSelect { get; set; }
+}

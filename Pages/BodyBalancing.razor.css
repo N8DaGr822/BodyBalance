@@ -1,0 +1,66 @@
+.page-intro {
+    color: var(--muted);
+    margin-top: -0.25rem;
+}
+
+.level-heading {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.node-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.leaf-panel {
+    display: flex;
+    gap: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 640px;
+}
+
+.leaf-image {
+    flex: 0 0 160px;
+}
+
+.leaf-image ::deep .node-image {
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+}
+
+.leaf-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.leaf-body h2 {
+    margin: 0;
+}
+
+.leaf-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.empty-state {
+    padding: 2rem 0;
+}
+
+@media (max-width: 480px) {
+    .leaf-panel {
+        flex-direction: column;
+    }
+
+    .leaf-image {
+        flex-basis: auto;
+        max-width: 200px;
+    }
+}

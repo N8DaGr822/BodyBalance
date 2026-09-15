@@ -1,0 +1,25 @@
+@using BodyBalancingApp.Models
+
+<nav class="flow-trail" aria-label="Flow chart path">
+    <button type="button" class="flow-step flow-step-root @(Trail.Count == 0 ? "flow-step-current" : "")"
+            @onclick="() => OnJump.InvokeAsync(-1)">
+        @RootLabel
+    </button>
+
+    @for (var i = 0; i < Trail.Count; i++)
+    {
+        var index = i;
+        var node = Trail[index];
+        <span class="flow-arrow" aria-hidden="true">&#8594;</span>
+        <button type="button" class="flow-step @(index == Trail.Count - 1 ? "flow-step-current" : "")"
+                @onclick="() => OnJump.InvokeAsync(index)">
+            @node.Title
+        </button>
+    }
+</nav>
+
+@code {
+    [Parameter] public List<TreeNode> Trail { get; set; } = new();
+    [Parameter] public string RootLabel { get; set; } = "Start";
+    [Parameter] public EventCallback<int> OnJump { get; set; }
+}

@@ -1,0 +1,147 @@
+[
+  {
+    "id": "energy",
+    "title": "Energy",
+    "description": "Category 1 of 6 — imbalances held in the body's energy field.",
+    "children": [
+      {
+        "id": "post-traumatic",
+        "title": "Post Traumatic",
+        "children": [
+          { "id": "physical-trauma", "title": "Physical Trauma" },
+          { "id": "recovery-interference", "title": "Recovery Interference" },
+          { "id": "physical-emotional-shock", "title": "Physical-Emotional Shock" }
+        ]
+      },
+      {
+        "id": "allergy-or-intolerance",
+        "title": "Allergy or Intolerance",
+        "children": [
+          { "id": "physical-intolerance", "title": "Physical Intolerance" },
+          { "id": "idea-allergy", "title": "Idea Allergy" },
+          { "id": "idea-intolerance", "title": "Idea Intolerance" },
+          { "id": "physical-allergy", "title": "Physical Allergy" }
+        ]
+      },
+      {
+        "id": "offensive",
+        "title": "Offensive",
+        "children": [
+          { "id": "curse", "title": "Curse" },
+          { "id": "cording", "title": "Cording" },
+          { "id": "entity", "title": "Entity" },
+          { "id": "post-hypnotic-suggestion", "title": "Post-Hypnotic Suggestion" },
+          { "id": "saboteur", "title": "Saboteur" }
+        ]
+      },
+      {
+        "id": "emotional",
+        "title": "Emotional",
+        "children": [
+          {
+            "id": "trapped-emotion",
+            "title": "Trapped Emotion",
+            "children": [
+              { "id": "prenatal-trapped-emotion", "title": "Prenatal-Trapped Emotion" },
+              { "id": "common-trapped-emotion", "title": "Common Trapped Emotion" },
+              { "id": "preconception-trapped-emotion", "title": "Preconception Trapped Emotion" },
+              { "id": "shared-trapped-emotion", "title": "Shared Trapped Emotion" },
+              { "id": "inherited-trapped-emotion", "title": "Inherited Trapped Emotion" },
+              { "id": "absorbed-trapped-emotion", "title": "Absorbed Trapped Emotion" }
+            ]
+          },
+          {
+            "id": "compound",
+            "title": "Compound",
+            "children": [
+              { "id": "prenatal-trapped-emotion", "title": "Prenatal-Trapped Emotion" },
+              { "id": "common-trapped-emotion", "title": "Common Trapped Emotion" },
+              { "id": "preconception-trapped-emotion", "title": "Preconception Trapped Emotion" },
+              { "id": "shared-trapped-emotion", "title": "Shared Trapped Emotion" },
+              { "id": "inherited-trapped-emotion", "title": "Inherited Trapped Emotion" },
+              { "id": "absorbed-trapped-emotion", "title": "Absorbed Trapped Emotion" }
+            ]
+          },
+          {
+            "id": "heart-wall-emotion",
+            "title": "Heart-Wall Emotion",
+            "children": [
+              { "id": "prenatal-trapped-emotion", "title": "Prenatal-Trapped Emotion" },
+              { "id": "common-trapped-emotion", "title": "Common Trapped Emotion" },
+              { "id": "preconception-trapped-emotion", "title": "Preconception Trapped Emotion" },
+              { "id": "shared-trapped-emotion", "title": "Shared Trapped Emotion" },
+              { "id": "inherited-trapped-emotion", "title": "Inherited Trapped Emotion" },
+              { "id": "absorbed-trapped-emotion", "title": "Absorbed Trapped Emotion" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mental",
+        "title": "Mental",
+        "children": [
+          { "id": "will-to", "title": "Will to..." },
+          { "id": "memory-field", "title": "Memory Field" },
+          { "id": "no-will-to", "title": "No will to.." },
+          {
+            "id": "programming",
+            "title": "Programming",
+            "children": [
+              { "id": "despair-anchor", "title": "Despair Anchor" },
+              { "id": "image", "title": "Image" },
+              { "id": "belief-code", "title": "Belief Code" }
+            ]
+          },
+          { "id": "broadcast-message", "title": "Broadcast Message" }
+        ]
+      },
+      {
+        "id": "reverberation",
+        "title": "Reverberation",
+        "children": [
+          { "id": "seeking-heart-energy", "title": "Seeking Heart Energy" },
+          { "id": "organ-communication", "title": "Organ Communication" },
+          { "id": "current-symptom", "title": "Current Symptom" },
+          { "id": "emotional-reverberation", "title": "Emotional Reverberation" },
+          { "id": "sickness-memory", "title": "Sickness Memory" },
+          { "id": "miasm", "title": "Miasm" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "category-2",
+    "title": "Category 2",
+    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
+    "comingSoon": true,
+    "children": []
+  },
+  {
+    "id": "category-3",
+    "title": "Category 3",
+    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
+    "comingSoon": true,
+    "children": []
+  },
+  {
+    "id": "category-4",
+    "title": "Category 4",
+    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
+    "comingSoon": true,
+    "children": []
+  },
+  {
+    "id": "category-5",
+    "title": "Category 5",
+    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
+    "comingSoon": true,
+    "children": []
+  },
+  {
+    "id": "category-6",
+    "title": "Category 6",
+    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
+    "comingSoon": true,
+    "children": []
+  }
+]

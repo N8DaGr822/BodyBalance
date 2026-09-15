@@ -1,0 +1,67 @@
+@* Renders a real image if one is supplied, otherwise a generated color tile with initials
+   so every listing always has something to "choose from" even before real artwork exists. *@
+
+@if (!string.IsNullOrWhiteSpace(ImageUrl))
+{
+    <img class="node-image" src="@ImageUrl" alt="@Title" />
+}
+else
+{
+    <div class="node-image node-image-placeholder" style="@GradientStyle">
+        <span>@Initials</span>
+    </div>
+}
+
+@code {
+    [Parameter, EditorRequired] public string Title { get; set; } = "";
+    [Parameter, EditorRequired] public string Seed { get; set; } = "";
+    [Parameter] public string? ImageUrl { get; set; }
+
+    private string Initials =>
+        BuildInitials(Title);
+
+    private string GradientStyle
+    {
+        get
+        {
+            var hue1 = HashToHue(Seed);
+            var hue2 = (hue1 + 40) % 360;
+            return $"background: linear-gradient(135deg, hsl({hue1}, 62%, 45%), hsl({hue2}, 70%, 34%));";
+        }
+    }
+
+    private static string BuildInitials(string title)
+    {
+        var words = title
+            .Split(new[] { ' ', '-', '_', '.' }, StringSplitOptions.RemoveEmptyEntries)
+            .Where(w => w.Length > 0)
+            .ToList();
+
+        if (words.Count == 0)
+        {
+            return "?";
+        }
+
+        if (words.Count == 1)
+        {
+            return words[0].Length >= 2
+                ? words[0].Substring(0, 2).ToUpperInvariant()
+                : words[0].Substring(0, 1).ToUpperInvariant();
+        }
+
+        return string.Concat(words.Take(2).Select(w => char.ToUpperInvariant(w[0])));
+    }
+
+    private static int HashToHue(string seed)
+    {
+        unchecked
+        {
+            var hash = 23;
+            foreach (var c in seed)
+            {
+                hash = hash * 31 + c;
+            }
+            return Math.Abs(hash) % 360;
+        }
+    }
+}
