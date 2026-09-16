@@ -105,12 +105,12 @@ else
     {
         if (index < 0)
         {
-            Nav.NavigateTo("/body-balancing");
+            Nav.NavigateTo($"{Nav.BaseUri}body-balancing");
             return;
         }
 
         var slugPath = string.Join('/', _trail.Take(index + 1).Select(n => n.Id));
-        Nav.NavigateTo($"/body-balancing/{slugPath}");
+        Nav.NavigateTo($"{Nav.BaseUri}body-balancing/{slugPath}");
     }
 
     private void SelectNode(TreeNode node)
@@ -121,6 +121,6 @@ else
         }
 
         var prefix = _trail.Count == 0 ? "" : string.Join('/', _trail.Select(n => n.Id)) + "/";
-        Nav.NavigateTo($"/body-balancing/{prefix}{node.Id}");
+        Nav.NavigateTo($"{Nav.BaseUri}body-balancing/{prefix}{node.Id}");
     }
 }
