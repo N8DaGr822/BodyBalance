@@ -1,9 +1,8 @@
-@* Renders a real image if one is supplied, otherwise a generated color tile with initials
-   so every listing always has something to "choose from" even before real artwork exists. *@
+@inject NavigationManager Nav
 
-@if (!string.IsNullOrWhiteSpace(ImageUrl))
+@if (!string.IsNullOrWhiteSpace(ResolvedImageUrl) && !_imageFailed)
 {
-    <img class="node-image" src="@ImageUrl" alt="@Title" />
+    <img class="node-image" src="@ResolvedImageUrl" alt="@Title" @onerror="HandleImageError" />
 }
 else
 {
@@ -16,6 +15,34 @@ else
     [Parameter, EditorRequired] public string Title { get; set; } = "";
     [Parameter, EditorRequired] public string Seed { get; set; } = "";
     [Parameter] public string? ImageUrl { get; set; }
+
+    private static readonly string[] DefaultImageUrls =
+    [
+        "images/cards/body-balancing.png",
+        "images/cards/emotion-stability.png",
+        "images/cards/energy.png",
+        "images/cards/category-2.png",
+        "images/cards/category-3.png",
+        "images/cards/category-4.png",
+        "images/cards/category-5.png",
+        "images/cards/category-6.png"
+    ];
+
+    private bool _imageFailed;
+    private string? _resolvedImageUrl;
+
+    protected override void OnParametersSet()
+    {
+        var nextImageUrl = ResolveImageUrl(GetCandidateImageUrl());
+        if (!string.Equals(_resolvedImageUrl, nextImageUrl, StringComparison.Ordinal))
+        {
+            _imageFailed = false;
+            _resolvedImageUrl = nextImageUrl;
+        }
+    }
+
+    private string? ResolvedImageUrl =>
+        _resolvedImageUrl;
 
     private string Initials =>
         BuildInitials(Title);
@@ -50,6 +77,37 @@ else
         }
 
         return string.Concat(words.Take(2).Select(w => char.ToUpperInvariant(w[0])));
+    }
+
+    private string GetCandidateImageUrl()
+    {
+        if (!string.IsNullOrWhiteSpace(ImageUrl))
+        {
+            return ImageUrl;
+        }
+
+        return DefaultImageUrls[HashToHue(Seed) % DefaultImageUrls.Length];
+    }
+
+    private string? ResolveImageUrl(string? imageUrl)
+    {
+        if (string.IsNullOrWhiteSpace(imageUrl))
+        {
+            return null;
+        }
+
+        var trimmed = imageUrl.Trim();
+        if (Uri.TryCreate(trimmed, UriKind.Absolute, out var absolute))
+        {
+            return absolute.ToString();
+        }
+
+        return Nav.ToAbsoluteUri(trimmed.TrimStart('/')).ToString();
+    }
+
+    private void HandleImageError()
+    {
+        _imageFailed = true;
     }
 
     private static int HashToHue(string seed)

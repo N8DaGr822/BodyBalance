@@ -15,11 +15,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: 2.25rem 1.5rem;
+    gap: 0.65rem;
+    padding: 0 1.5rem 1.5rem;
     border-radius: 16px;
     border: 1px solid var(--border);
     background: var(--surface);
+    overflow: hidden;
     cursor: pointer;
     text-align: center;
     transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
@@ -38,8 +39,15 @@
     border-color: #e0507a;
 }
 
-.option-icon {
-    font-size: 2.5rem;
+.option-image {
+    display: block;
+    width: calc(100% + 3rem);
+    margin: 0 -1.5rem 0.35rem;
+}
+
+.option-image ::deep .node-image {
+    border-radius: 16px 16px 0 0;
+    aspect-ratio: 16 / 9;
 }
 
 .option-title {

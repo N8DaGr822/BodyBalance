@@ -9,13 +9,17 @@
 
     <div class="option-grid">
         <button type="button" class="option-card option-card-1" @onclick='() => Nav.NavigateTo($"{Nav.BaseUri}body-balancing")'>
-            <span class="option-icon" aria-hidden="true">⚖️</span>
+            <span class="option-image" aria-hidden="true">
+                <PlaceholderImage Title="Body Balancing" Seed="body-balancing" ImageUrl="images/cards/body-balancing.png" />
+            </span>
             <span class="option-title">Body Balancing</span>
             <span class="option-desc">Explore physical, energetic, and mental imbalances.</span>
         </button>
 
         <button type="button" class="option-card option-card-2" @onclick='() => Nav.NavigateTo($"{Nav.BaseUri}emotion-stability")'>
-            <span class="option-icon" aria-hidden="true">💗</span>
+            <span class="option-image" aria-hidden="true">
+                <PlaceholderImage Title="Emotion Stability" Seed="emotion-stability" ImageUrl="images/cards/emotion-stability.png" />
+            </span>
             <span class="option-title">Emotion Stability</span>
             <span class="option-desc">Explore emotional balance and regulation.</span>
         </button>

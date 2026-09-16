@@ -2,37 +2,89 @@
   {
     "id": "energy",
     "title": "Energy",
+    "image": "images/cards/energy.png",
     "description": "Category 1 of 6 — imbalances held in the body's energy field.",
     "children": [
       {
         "id": "post-traumatic",
         "title": "Post Traumatic",
         "children": [
-          { "id": "physical-trauma", "title": "Physical Trauma" },
-          { "id": "recovery-interference", "title": "Recovery Interference" },
-          { "id": "physical-emotional-shock", "title": "Physical-Emotional Shock" }
-        ]
+          {
+            "id": "physical-trauma",
+            "title": "Physical Trauma",
+            "image": "images/cards/physical-trauma.png"
+          },
+          {
+            "id": "recovery-interference",
+            "title": "Recovery Interference",
+            "image": "images/cards/recovery-interference.png"
+          },
+          {
+            "id": "physical-emotional-shock",
+            "title": "Physical-Emotional Shock",
+            "image": "images/cards/physical-emotional-shock.png"
+          }
+        ],
+        "image": "images/cards/post-traumatic.png"
       },
       {
         "id": "allergy-or-intolerance",
         "title": "Allergy or Intolerance",
         "children": [
-          { "id": "physical-intolerance", "title": "Physical Intolerance" },
-          { "id": "idea-allergy", "title": "Idea Allergy" },
-          { "id": "idea-intolerance", "title": "Idea Intolerance" },
-          { "id": "physical-allergy", "title": "Physical Allergy" }
-        ]
+          {
+            "id": "physical-intolerance",
+            "title": "Physical Intolerance",
+            "image": "images/cards/physical-intolerance.png"
+          },
+          {
+            "id": "idea-allergy",
+            "title": "Idea Allergy",
+            "image": "images/cards/idea-allergy.png"
+          },
+          {
+            "id": "idea-intolerance",
+            "title": "Idea Intolerance",
+            "image": "images/cards/idea-intolerance.png"
+          },
+          {
+            "id": "physical-allergy",
+            "title": "Physical Allergy",
+            "image": "images/cards/physical-allergy.png"
+          }
+        ],
+        "image": "images/cards/allergy-or-intolerance.png"
       },
       {
         "id": "offensive",
         "title": "Offensive",
         "children": [
-          { "id": "curse", "title": "Curse" },
-          { "id": "cording", "title": "Cording" },
-          { "id": "entity", "title": "Entity" },
-          { "id": "post-hypnotic-suggestion", "title": "Post-Hypnotic Suggestion" },
-          { "id": "saboteur", "title": "Saboteur" }
-        ]
+          {
+            "id": "curse",
+            "title": "Curse",
+            "image": "images/cards/curse.png"
+          },
+          {
+            "id": "cording",
+            "title": "Cording",
+            "image": "images/cards/cording.png"
+          },
+          {
+            "id": "entity",
+            "title": "Entity",
+            "image": "images/cards/entity.png"
+          },
+          {
+            "id": "post-hypnotic-suggestion",
+            "title": "Post-Hypnotic Suggestion",
+            "image": "images/cards/post-hypnotic-suggestion.png"
+          },
+          {
+            "id": "saboteur",
+            "title": "Saboteur",
+            "image": "images/cards/saboteur.png"
+          }
+        ],
+        "image": "images/cards/offensive.png"
       },
       {
         "id": "emotional",
@@ -42,76 +94,208 @@
             "id": "trapped-emotion",
             "title": "Trapped Emotion",
             "children": [
-              { "id": "prenatal-trapped-emotion", "title": "Prenatal-Trapped Emotion" },
-              { "id": "common-trapped-emotion", "title": "Common Trapped Emotion" },
-              { "id": "preconception-trapped-emotion", "title": "Preconception Trapped Emotion" },
-              { "id": "shared-trapped-emotion", "title": "Shared Trapped Emotion" },
-              { "id": "inherited-trapped-emotion", "title": "Inherited Trapped Emotion" },
-              { "id": "absorbed-trapped-emotion", "title": "Absorbed Trapped Emotion" }
-            ]
+              {
+                "id": "prenatal-trapped-emotion",
+                "title": "Prenatal-Trapped Emotion",
+                "image": "images/cards/prenatal-trapped-emotion.png"
+              },
+              {
+                "id": "common-trapped-emotion",
+                "title": "Common Trapped Emotion",
+                "image": "images/cards/common-trapped-emotion.png"
+              },
+              {
+                "id": "preconception-trapped-emotion",
+                "title": "Preconception Trapped Emotion",
+                "image": "images/cards/preconception-trapped-emotion.png"
+              },
+              {
+                "id": "shared-trapped-emotion",
+                "title": "Shared Trapped Emotion",
+                "image": "images/cards/shared-trapped-emotion.png"
+              },
+              {
+                "id": "inherited-trapped-emotion",
+                "title": "Inherited Trapped Emotion",
+                "image": "images/cards/inherited-trapped-emotion.png"
+              },
+              {
+                "id": "absorbed-trapped-emotion",
+                "title": "Absorbed Trapped Emotion",
+                "image": "images/cards/absorbed-trapped-emotion.png"
+              }
+            ],
+            "image": "images/cards/trapped-emotion.png"
           },
           {
             "id": "compound",
             "title": "Compound",
             "children": [
-              { "id": "prenatal-trapped-emotion", "title": "Prenatal-Trapped Emotion" },
-              { "id": "common-trapped-emotion", "title": "Common Trapped Emotion" },
-              { "id": "preconception-trapped-emotion", "title": "Preconception Trapped Emotion" },
-              { "id": "shared-trapped-emotion", "title": "Shared Trapped Emotion" },
-              { "id": "inherited-trapped-emotion", "title": "Inherited Trapped Emotion" },
-              { "id": "absorbed-trapped-emotion", "title": "Absorbed Trapped Emotion" }
-            ]
+              {
+                "id": "prenatal-trapped-emotion",
+                "title": "Prenatal-Trapped Emotion",
+                "image": "images/cards/prenatal-trapped-emotion.png"
+              },
+              {
+                "id": "common-trapped-emotion",
+                "title": "Common Trapped Emotion",
+                "image": "images/cards/common-trapped-emotion.png"
+              },
+              {
+                "id": "preconception-trapped-emotion",
+                "title": "Preconception Trapped Emotion",
+                "image": "images/cards/preconception-trapped-emotion.png"
+              },
+              {
+                "id": "shared-trapped-emotion",
+                "title": "Shared Trapped Emotion",
+                "image": "images/cards/shared-trapped-emotion.png"
+              },
+              {
+                "id": "inherited-trapped-emotion",
+                "title": "Inherited Trapped Emotion",
+                "image": "images/cards/inherited-trapped-emotion.png"
+              },
+              {
+                "id": "absorbed-trapped-emotion",
+                "title": "Absorbed Trapped Emotion",
+                "image": "images/cards/absorbed-trapped-emotion.png"
+              }
+            ],
+            "image": "images/cards/compound.png"
           },
           {
             "id": "heart-wall-emotion",
             "title": "Heart-Wall Emotion",
             "children": [
-              { "id": "prenatal-trapped-emotion", "title": "Prenatal-Trapped Emotion" },
-              { "id": "common-trapped-emotion", "title": "Common Trapped Emotion" },
-              { "id": "preconception-trapped-emotion", "title": "Preconception Trapped Emotion" },
-              { "id": "shared-trapped-emotion", "title": "Shared Trapped Emotion" },
-              { "id": "inherited-trapped-emotion", "title": "Inherited Trapped Emotion" },
-              { "id": "absorbed-trapped-emotion", "title": "Absorbed Trapped Emotion" }
-            ]
+              {
+                "id": "prenatal-trapped-emotion",
+                "title": "Prenatal-Trapped Emotion",
+                "image": "images/cards/prenatal-trapped-emotion.png"
+              },
+              {
+                "id": "common-trapped-emotion",
+                "title": "Common Trapped Emotion",
+                "image": "images/cards/common-trapped-emotion.png"
+              },
+              {
+                "id": "preconception-trapped-emotion",
+                "title": "Preconception Trapped Emotion",
+                "image": "images/cards/preconception-trapped-emotion.png"
+              },
+              {
+                "id": "shared-trapped-emotion",
+                "title": "Shared Trapped Emotion",
+                "image": "images/cards/shared-trapped-emotion.png"
+              },
+              {
+                "id": "inherited-trapped-emotion",
+                "title": "Inherited Trapped Emotion",
+                "image": "images/cards/inherited-trapped-emotion.png"
+              },
+              {
+                "id": "absorbed-trapped-emotion",
+                "title": "Absorbed Trapped Emotion",
+                "image": "images/cards/absorbed-trapped-emotion.png"
+              }
+            ],
+            "image": "images/cards/heart-wall-emotion.png"
           }
-        ]
+        ],
+        "image": "images/cards/emotional.png"
       },
       {
         "id": "mental",
         "title": "Mental",
         "children": [
-          { "id": "will-to", "title": "Will to..." },
-          { "id": "memory-field", "title": "Memory Field" },
-          { "id": "no-will-to", "title": "No will to.." },
+          {
+            "id": "will-to",
+            "title": "Will to...",
+            "image": "images/cards/will-to.png"
+          },
+          {
+            "id": "memory-field",
+            "title": "Memory Field",
+            "image": "images/cards/memory-field.png"
+          },
+          {
+            "id": "no-will-to",
+            "title": "No will to..",
+            "image": "images/cards/no-will-to.png"
+          },
           {
             "id": "programming",
             "title": "Programming",
             "children": [
-              { "id": "despair-anchor", "title": "Despair Anchor" },
-              { "id": "image", "title": "Image" },
-              { "id": "belief-code", "title": "Belief Code" }
-            ]
+              {
+                "id": "despair-anchor",
+                "title": "Despair Anchor",
+                "image": "images/cards/despair-anchor.png"
+              },
+              {
+                "id": "image",
+                "title": "Image",
+                "image": "images/cards/image.png"
+              },
+              {
+                "id": "belief-code",
+                "title": "Belief Code",
+                "image": "images/cards/belief-code.png"
+              }
+            ],
+            "image": "images/cards/programming.png"
           },
-          { "id": "broadcast-message", "title": "Broadcast Message" }
-        ]
+          {
+            "id": "broadcast-message",
+            "title": "Broadcast Message",
+            "image": "images/cards/broadcast-message.png"
+          }
+        ],
+        "image": "images/cards/mental.png"
       },
       {
         "id": "reverberation",
         "title": "Reverberation",
         "children": [
-          { "id": "seeking-heart-energy", "title": "Seeking Heart Energy" },
-          { "id": "organ-communication", "title": "Organ Communication" },
-          { "id": "current-symptom", "title": "Current Symptom" },
-          { "id": "emotional-reverberation", "title": "Emotional Reverberation" },
-          { "id": "sickness-memory", "title": "Sickness Memory" },
-          { "id": "miasm", "title": "Miasm" }
-        ]
+          {
+            "id": "seeking-heart-energy",
+            "title": "Seeking Heart Energy",
+            "image": "images/cards/seeking-heart-energy.png"
+          },
+          {
+            "id": "organ-communication",
+            "title": "Organ Communication",
+            "image": "images/cards/organ-communication.png"
+          },
+          {
+            "id": "current-symptom",
+            "title": "Current Symptom",
+            "image": "images/cards/current-symptom.png"
+          },
+          {
+            "id": "emotional-reverberation",
+            "title": "Emotional Reverberation",
+            "image": "images/cards/emotional-reverberation.png"
+          },
+          {
+            "id": "sickness-memory",
+            "title": "Sickness Memory",
+            "image": "images/cards/sickness-memory.png"
+          },
+          {
+            "id": "miasm",
+            "title": "Miasm",
+            "image": "images/cards/miasm.png"
+          }
+        ],
+        "image": "images/cards/reverberation.png"
       }
     ]
   },
   {
     "id": "category-2",
     "title": "Category 2",
+    "image": "images/cards/category-2.png",
     "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
     "comingSoon": true,
     "children": []
@@ -119,6 +303,7 @@
   {
     "id": "category-3",
     "title": "Category 3",
+    "image": "images/cards/category-3.png",
     "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
     "comingSoon": true,
     "children": []
@@ -126,6 +311,7 @@
   {
     "id": "category-4",
     "title": "Category 4",
+    "image": "images/cards/category-4.png",
     "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
     "comingSoon": true,
     "children": []
@@ -133,6 +319,7 @@
   {
     "id": "category-5",
     "title": "Category 5",
+    "image": "images/cards/category-5.png",
     "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
     "comingSoon": true,
     "children": []
@@ -140,6 +327,7 @@
   {
     "id": "category-6",
     "title": "Category 6",
+    "image": "images/cards/category-6.png",
     "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
     "comingSoon": true,
     "children": []
