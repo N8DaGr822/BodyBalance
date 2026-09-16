@@ -5,12 +5,12 @@
 @inject BodyBalancingDataService DataService
 @inject NavigationManager Nav
 
-<PageTitle>Body Balancing</PageTitle>
+<PageTitle>Body Systems Map</PageTitle>
 
-<h1>Body Balancing</h1>
-<p class="page-intro">Follow the flow chart, one step at a time, to narrow down the imbalance.</p>
+<h1>Body Systems Map</h1>
+<p class="page-intro">Follow the flow one step at a time to narrow down the imbalance pattern.</p>
 
-<FlowTrail Trail="_trail" RootLabel="Body Balancing" OnJump="JumpTo" />
+<FlowTrail Trail="_trail" RootLabel="Body Systems Map" OnJump="JumpTo" />
 
 @if (_loading)
 {
@@ -20,7 +20,7 @@ else if (_notFound)
 {
     <div class="empty-state">
         <p>That path couldn't be found.</p>
-        <button type="button" class="btn-secondary" @onclick="() => JumpTo(-1)">Back to Body Balancing</button>
+        <button type="button" class="btn-secondary" @onclick="() => JumpTo(-1)">Back to Body Systems Map</button>
     </div>
 }
 else if (CurrentNode is not null && _choices.Count == 0)
@@ -73,8 +73,8 @@ else
     private TreeNode? CurrentNode => _trail.Count > 0 ? _trail[^1] : null;
 
     private string LevelHeading => CurrentNode is null
-        ? "Choose a category"
-        : $"{CurrentNode.Title} — choose an option";
+        ? "Choose an area"
+        : $"{CurrentNode.Title} - choose an option";
 
     protected override async Task OnParametersSetAsync()
     {

@@ -1,9 +1,9 @@
 [
   {
-    "id": "energy",
-    "title": "Energy",
+    "id": "energies",
+    "title": "Energies",
     "image": "images/cards/energy.png",
-    "description": "Category 1 of 6 — imbalances held in the body's energy field.",
+    "description": "Explore emotional, post-trauma, mental, reverberating, and other subtle-energy patterns.",
     "children": [
       {
         "id": "post-traumatic",
@@ -134,32 +134,32 @@
               {
                 "id": "prenatal-trapped-emotion",
                 "title": "Prenatal-Trapped Emotion",
-                "image": "images/cards/prenatal-trapped-emotion.png"
+                "image": "images/cards/compound-prenatal-trapped-emotion.png"
               },
               {
                 "id": "common-trapped-emotion",
                 "title": "Common Trapped Emotion",
-                "image": "images/cards/common-trapped-emotion.png"
+                "image": "images/cards/compound-common-trapped-emotion.png"
               },
               {
                 "id": "preconception-trapped-emotion",
                 "title": "Preconception Trapped Emotion",
-                "image": "images/cards/preconception-trapped-emotion.png"
+                "image": "images/cards/compound-preconception-trapped-emotion.png"
               },
               {
                 "id": "shared-trapped-emotion",
                 "title": "Shared Trapped Emotion",
-                "image": "images/cards/shared-trapped-emotion.png"
+                "image": "images/cards/compound-shared-trapped-emotion.png"
               },
               {
                 "id": "inherited-trapped-emotion",
                 "title": "Inherited Trapped Emotion",
-                "image": "images/cards/inherited-trapped-emotion.png"
+                "image": "images/cards/compound-inherited-trapped-emotion.png"
               },
               {
                 "id": "absorbed-trapped-emotion",
                 "title": "Absorbed Trapped Emotion",
-                "image": "images/cards/absorbed-trapped-emotion.png"
+                "image": "images/cards/compound-absorbed-trapped-emotion.png"
               }
             ],
             "image": "images/cards/compound.png"
@@ -171,32 +171,32 @@
               {
                 "id": "prenatal-trapped-emotion",
                 "title": "Prenatal-Trapped Emotion",
-                "image": "images/cards/prenatal-trapped-emotion.png"
+                "image": "images/cards/heart-wall-prenatal-trapped-emotion.png"
               },
               {
                 "id": "common-trapped-emotion",
                 "title": "Common Trapped Emotion",
-                "image": "images/cards/common-trapped-emotion.png"
+                "image": "images/cards/heart-wall-common-trapped-emotion.png"
               },
               {
                 "id": "preconception-trapped-emotion",
                 "title": "Preconception Trapped Emotion",
-                "image": "images/cards/preconception-trapped-emotion.png"
+                "image": "images/cards/heart-wall-preconception-trapped-emotion.png"
               },
               {
                 "id": "shared-trapped-emotion",
                 "title": "Shared Trapped Emotion",
-                "image": "images/cards/shared-trapped-emotion.png"
+                "image": "images/cards/heart-wall-shared-trapped-emotion.png"
               },
               {
                 "id": "inherited-trapped-emotion",
                 "title": "Inherited Trapped Emotion",
-                "image": "images/cards/inherited-trapped-emotion.png"
+                "image": "images/cards/heart-wall-inherited-trapped-emotion.png"
               },
               {
                 "id": "absorbed-trapped-emotion",
                 "title": "Absorbed Trapped Emotion",
-                "image": "images/cards/absorbed-trapped-emotion.png"
+                "image": "images/cards/heart-wall-absorbed-trapped-emotion.png"
               }
             ],
             "image": "images/cards/heart-wall-emotion.png"
@@ -293,43 +293,38 @@
     ]
   },
   {
-    "id": "category-2",
-    "title": "Category 2",
+    "id": "circuits-systems",
+    "title": "Circuits & Systems",
     "image": "images/cards/category-2.png",
-    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
-    "comingSoon": true,
+    "description": "Look at communication pathways, organ relationships, glands, energetic circuits, and system-level connection patterns.",
     "children": []
   },
   {
-    "id": "category-3",
-    "title": "Category 3",
+    "id": "toxicity",
+    "title": "Toxicity",
     "image": "images/cards/category-3.png",
-    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
-    "comingSoon": true,
+    "description": "Consider patterns related to toxic load, environmental exposure, chemical stressors, and energetic residue.",
     "children": []
   },
   {
-    "id": "category-4",
-    "title": "Category 4",
+    "id": "nutrition-lifestyle",
+    "title": "Nutrition & Lifestyle",
     "image": "images/cards/category-4.png",
-    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
-    "comingSoon": true,
+    "description": "Explore supportive needs such as hydration, minerals, foods, rest, daily rhythm, and lifestyle stress.",
     "children": []
   },
   {
-    "id": "category-5",
-    "title": "Category 5",
+    "id": "misalignments",
+    "title": "Misalignments",
     "image": "images/cards/category-5.png",
-    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
-    "comingSoon": true,
+    "description": "Check structural balance, posture, soft tissue strain, and alignment patterns that may need attention.",
     "children": []
   },
   {
-    "id": "category-6",
-    "title": "Category 6",
+    "id": "pathogens",
+    "title": "Pathogens",
     "image": "images/cards/category-6.png",
-    "description": "Not yet defined — add its subcategories to wwwroot/data/body-balancing.json.",
-    "comingSoon": true,
+    "description": "Consider imbalance patterns associated with viral, bacterial, fungal, mold, parasitic, or microbial themes.",
     "children": []
   }
 ]
