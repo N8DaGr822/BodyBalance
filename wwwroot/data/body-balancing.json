@@ -325,6 +325,81 @@
     "title": "Pathogens",
     "image": "images/cards/category-6.png",
     "description": "Consider imbalance patterns associated with viral, bacterial, fungal, mold, parasitic, or microbial themes.",
-    "children": []
+    "children": [
+      {
+        "id": "pathogen",
+        "title": "Pathogen",
+        "children": [
+          {
+            "id": "physical",
+            "title": "Physical",
+            "children": [
+              {
+                "id": "mold",
+                "title": "Mold"
+              },
+              {
+                "id": "parasite",
+                "title": "Parasite"
+              },
+              {
+                "id": "virus",
+                "title": "Virus"
+              },
+              {
+                "id": "fungus",
+                "title": "Fungus"
+              },
+              {
+                "id": "prion",
+                "title": "Prion"
+              },
+              {
+                "id": "bacteria",
+                "title": "Bacteria"
+              },
+              {
+                "id": "biofilm",
+                "title": "Biofilm"
+              }
+            ]
+          },
+          {
+            "id": "energy-of-pathogen",
+            "title": "Energy of Pathogen",
+            "children": [
+              {
+                "id": "mold",
+                "title": "Mold"
+              },
+              {
+                "id": "parasite",
+                "title": "Parasite"
+              },
+              {
+                "id": "virus",
+                "title": "Virus"
+              },
+              {
+                "id": "fungus",
+                "title": "Fungus"
+              },
+              {
+                "id": "prion",
+                "title": "Prion"
+              },
+              {
+                "id": "bacteria",
+                "title": "Bacteria"
+              },
+              {
+                "id": "biofilm",
+                "title": "Biofilm"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
